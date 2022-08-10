@@ -1,6 +1,7 @@
 #!/bin/bash
-# Generate Apache-like directory indexes from a folder
+# Generate Apache-like directory indexes from a folder or Google Drive content
 
+USE_GDRIVE=$true
 ROOT=/home/archive/public_html
 TARGET=/home/archive/static_html
 shopt -s globstar nullglob nocasematch
@@ -114,7 +115,11 @@ list_dir() {
         local p="${path##*/}"
         if [ -f "$path" ]; then
             f=${path#"$ROOT"}
-            u="$p"
+            if [ $USE_GDRIVE ]; then
+                u=$(rclone link "gdrive:archive$f" 2>&1) || { printf 'ERROR %s %s\n' "gdrive:archive$f" "$u"; u="$p"; }
+            else
+                u="$p"
+            fi
             i=$(get_icon "${path##*.}")
             t=$(date -r "$path" "+%Y-%m-%d %H:%M")
             l=$(($max_length - ${#p}))
