@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+	<title>EEPROM Utility for LiteOn/Sony Optical Drives</title>
+
+	<style type="text/css">
+		<!--
+		a { text-decoration: none; }
+		a:hover { color: #6699ff; }
+
+		body
+		{
+			font-family: Verdana, sans-serif;
+			font-size: 8pt;
+		}
+
+		h1
+		{
+			font-size: 16pt;
+		}
+
+		h2
+		{
+			font-size: 13pt;
+		}
+
+		h3
+		{
+			font-size: 10pt;
+			font-weight: bold;
+		}
+		-->
+	</style>
+
+	<meta name="Author" content="C0deKing" />
+</head><body bgcolor="#ffffff" text="#000000" link="#0033cc" vlink="#0033cc" alink="#6699ff">
+
+<h1>EEPROM Utility for LiteOn/Sony Optical Drives</h1>
+
+<h2>Document Information</h2>
+<p>
+	<b>Author:</b> The Code Guys (<a href="http://codeguys.rpc1.org/">http://codeguys.rpc1.org/</a>)<br />
+	<b>Date:</b> Last modified on 21 April 2006.<br />
+	<b>More information, help, and support:</b> <a href="http://club.cdfreaks.com/showthread.php?t=112103">EEPROM Utility thread at CD Freaks</a>
+</p>
+
+<h2>Disclaimer</h2>
+<p>This tool is NOT supported by LiteOn/Sony in any way. Furthermore, the author of this tool is not affiliated with LiteOn/Sony in any way. THE AUTHOR OF THIS TOOL WILL TAKE NO RESPONSIBILITY FOR ANYTHING THAT MAY RESULT FROM THE USE OR MISUSE OF THIS TOOL.</p>
+
+<h2>Introduction</h2>
+<p>This tool is designed to allow simple backup and restore of the EEPROM and to reset the learnt media calibration data.</p>
+
+<h2>Usage</h2>
+<p>Run <i>EEPROM_Utility.exe</i>. <b>Select the correct drive.</b> Then select the require function by clicking one of the function buttons.</p>
+
+<h2>Backup Eeprom</h2>
+<p>This function will make a backup of your EEPROM. Make sure you save at least two copies and keep one on removable media. Also always make a backup before you update your firmware and clearly name it with the current version number.</p>
+<p>5S and 6S drive will produce a 4KB backup file and the rest will produce a 1KB backup file. The 5S and 6S backup file also contains the HyperTuning data which will also be restored if this file is use with the restore function.<p>
+
+<h2>Restore Eeprom</h2>
+<p>This function will restore the drives EEPROM from a previously saved file. This function should be used as a last resort to correct a drive that just refuses to burn well and the problem has been eliminated down to being the drive and not a system problem.</p>
+
+<h2>Reset Learnt Media (new method in v2)</h2>
+<p>This function will clear all of the learnt media calibration data and flush the four burn logs. This is similar to reloading an EEPROM file which has not burnt any media. Remember it may take two to four burns before optimum results are achieved again, after resetting the calibration data. <b>If you already have good burns then this function is not for you.</b><br /><br />
+This function is for:<br />
+1/ Drives that drifts from good burns to poor burns after several burns.<br />
+2/ Drives that have used strategy switches and now have poor burn quality.<br />
+3/ Drives that now burn poorly after a very bad burn.<br />
+4/ 1213S users upgrading to 1633S or returning to 1213S. This is because the media code indices are completely different between the 1213S and 1633S, so the wrong learn data may be used.<br />
+<br />
+<b>NOTE:</B><br />
+<b>THIS IS EXPERIMENTAL. PLEASE MAKE A BACKUP OF ALL OFF YOUR DRIVES EEPROMS FIRST.</b><br />
+There is no reason to clear the learn data unless the drive has become confused due to strategy switching, a very bad burn, or in the case of 3S firmware, cross flashing. It's not a magic improve burn patch to the eeprom, like CGxx is to firmware.<br /><br />
+So you should only us the reset learn if the drive is not producing the results you would expect or you have a new batch of media or you have been using a strategy with one type of media and you now want to use another type. e.g. You were using RITEKR03 with the T02 strategy and now you want to use real T02 or visa versa. Think of it this way. It's like loading your day one backup of your eeprom (if you had one) back into the drive.<br /><br />
+Resetting the learn media calibration data may set you back 2 to 4 consecutive burns, of the same media, before you get the same results again, if your media was already optimized by the drives learnt media calibration data. So I'm not encouraging people to rush out and reset their learn data. If it ain't broke don't fix it... :)</p>
+
+<h2>Reset HyperTurning <b>(5S and 6S only)</b></h2>
+<p>This function will clear all of the HyperTuning data. Remember it may take a couple of burns before optimum results are achieved again, after resetting the HyperTuning data. <b>If you already have good burns then this function is not for you.</b><br />
+<br />
+<b>NOTE:</B><br />
+<b>THIS IS EXPERIMENTAL. PLEASE MAKE A BACKUP OF ALL OFF YOUR DRIVES EEPROMS FIRST WITH V3.3.2 OR LATER BEFORE USING THIS FUNCTION.</b><br />
+Resetting the HyperTuning data may set you back a couple of burns, of the same media, before you get the same results again, if your media was already optimized by the HyperTuning. So I'm not encouraging people to rush out and reset their HyperTuning data. If it ain't broke don't fix it... :)</p>
+
+<h2>Upgrade Drive</h2>
+<p>This function allows you to upgrade (or downgrade) your drive to any model that is supported by your drive's hardware. Once you have changed your drives model you will be able to use official firmware in your drive without any crossflash patching.<br />
+Supported drive sets:<br />
+* 451S <> 851S<br />
+* 812S <> 832S<br />
+* 852S <> 862S<br />
+* 1213S <> 1613S <> 1633S <> 1653S<br />
+* 1673S <> 1693S<br />
+* 160P6S <> 165P6S<br />
+* 160H6S <> 165H6S<br />
+<br />
+Instructions:<br />
+ Method 1<br />
+ Use the Upgrade function to change your drives model.<br />
+ Flash to the new models firmware.<br /><br />
+ Method 2<br />
+ Flash to the new models firmware.<br />
+ Use the Upgrade function to change your drives model.<br />
+ Reboot your system or repower your drive if external.<br /><br />
+
+<b>Note:</b> 451S and 851S users wishing to crossflash to 812S or 832S should still use the OmniPatcher crossflash patch or use firmware already patched, as the hardware difference still requires the patch to allow the drive to work properly.</p>
+
+<h2>4x1S->811S (Drive)</h2>
+<p>This function will patch the EEPROM in the drive for a 4x1S conversion to 811S, using ala42's conversion algorithm. It also resets the learn data as well. After using this function the drive can be flashed with stock 811S firmware, which will allow 8x burning of DVD+R media and 4x for -R media.<br />
+<br />
+<b>Note:</b> Drives that are already converted can be repatched with this algorithm. Backup your eeprom first and then just use the in drive patch. A warning prompt will be displayed to alert you of the fact that the drive has already been patched. Select yes to continue, at this prompt.</p>
+
+<h2>4x1S->811S (File)</h2>
+<p>This function will patch an EEPROM file for a 4x1S conversion to 811S, using ala42's conversion algorithm. It also resets the learn data as well. After using this function the patched EEPROM file can be loaded into a drive, using the restored function, and then the drive can be flashed with stock 811S firmware, which will allow 8x burning of DVD+R media and 4x for -R media.</p>
+<br />
+<b>Note:</b> EEPROM files that are already converted can be repatched with this algorithm. A warning prompt will be displayed to alert you of the fact that the file has already been patched. Select yes to continue, at this prompt.</p>
+
+<h2>Repair Checksum</h2>
+<p>This function will correct a damaged checksum in the drive's EEPROM. If you have used an incorrect utility on the drive (like Rpcde2), you will be left with a drive that has a flashing light. This function will correct this problem.
+NOTE: This function will not correct a flashing light due to crossflashing firmware. You will need to use the OmniPatcher crossflash patch to correct this problem.</p>
+
+<h2>Slim Drive IDE Mode</h2>
+<p>This function allows the IDE mode of slim drives to be set to either Master or Slave. The currently selected function (Master/Slave), when the "Select IDE Mode" dialog is first displayed, is the current setting of the drive. Just select the mode you require and click OK.</p>
+
+<h2>Compatibility</h2>
+<p>The EEPROM Utility will work with CD/DVD drives based on Liteon hardware (Writers/Combos/ROM). This means that OEM drives based on Liteon hardware will also work (Sony, TDK, etc.). <b>Do not use this utility on non Liteon Hardware.</b></p>
+
+<h2>Credits</h2>
+Special thanks goes to <a href="http://forum.rpc1.org/portal.php">RPC1 (The Firmware Page)</a> and the authors of Dvdzone and PLScsi, xvi, Pat LaVarre and ala42 for sharing his invaluable knowledge of the EEPROM. Without them, this utility would not have been possible.
+ 
+
+</body></html>

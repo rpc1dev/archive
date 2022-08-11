@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+	<title>OmniPatcher for LiteOn/Sony Optical Drives</title>
+
+	<style type="text/css">
+		<!--
+		a { text-decoration: none; }
+		a:hover { color: #6699ff; }
+
+		body
+		{
+			font-family: Verdana, sans-serif;
+			font-size: 8pt;
+		}
+
+		h1
+		{
+			font-size: 16pt;
+		}
+
+		h2
+		{
+			font-size: 13pt;
+			color: #000099;
+		}
+
+		h3
+		{
+			font-size: 10pt;
+			font-weight: bold;
+			color: #660000;
+			margin-left: 16px;
+		}
+
+		p
+		{
+			margin-left: 32px;
+		}
+
+		span.mcode, span.fwrev
+		{
+			font-family: Courier New, monospace;
+		}
+		-->
+	</style>
+
+	<meta name="Author" content="http://codeguys.rpc1.org/" />
+</head><body bgcolor="#ffffff" text="#000000" link="#0033cc" vlink="#0033cc" alink="#6699ff">
+
+<h1>OmniPatcher for LiteOn/Sony Optical Drives</h1>
+
+<h2>Document Information</h2>
+<p>
+	<b>Author:</b> The Code Guys (<a href="http://codeguys.rpc1.org/">http://codeguys.rpc1.org/</a>)<br />
+	<b>Date:</b> Last modified on 22 July 2005.<br />
+	<b>More information, help, and support:</b> <a href="http://club.cdfreaks.com/showthread.php?t=97590">OmniPatcher for LiteOn/Sony Optical Drives</a> forum thread.
+</p>
+
+<h2>Disclaimer</h2>
+<p>This tool is <b>not</b> supported by LiteOn or Sony in any way. Furthermore, the authors of this tool are not affiliated with LiteOn or Sony in any way. THE AUTHORS OF THIS TOOL WILL TAKE NO RESPONSIBILITY FOR ANYTHING THAT MAY RESULT FROM THE USE OR MISUSE OF THIS TOOL.</p>
+
+<h2>Introduction</h2>
+<p>The OmniPatcher, as the name suggests, is an all-in-one firmware patching tool for LiteOn/Sony optical drives that lets you customize your firmware to your heart's content and fine-tune your drive's performance.</p>
+
+<h2>Getting Started</h2>
+<h3>Loading your file</h3>
+<p>To load a file, you can either use the &quot;Load&quot; button to select a file or just simply drag a file into the main OmniPatcher window. OmniPatcher will work with both .BIN and .EXE firmwares. You can obtain .BIN firmwares by downloading them from <a href="http://dhc014.rpc1.org/indexOEM.htm">dhc014's firmware page</a> or <a href="http://codeguys.rpc1.org/firmwares.html">our firmware page</a> or by extracting the firmware from your drive. You can obtain .EXE firmwares by downloading them from the official LiteOn website, from <a href="http://dhc014.rpc1.org/indexOEM.htm">dhc014's firmware page</a>, or from <a href="http://codeguys.rpc1.org/firmwares.html">our firmware page</a>. Please note that OmniPatcher does <b>not</b> work with scrambled/compressed executable firmware flashers (all official LiteOn flashers from mid-2004 onwards are scrambled/compressed)! However, you can find firmwares repackaged in unscrambled firmware flashers on <a href="http://dhc014.rpc1.org/indexOEM.htm">dhc014's firmware page</a> and <a href="http://codeguys.rpc1.org/firmwares.html">our firmware page</a>.</p>
+
+<h3>Saving your file</h3>
+<p>When you are done selecting all the changes that you want, clicking &quot;Save As&quot; will allow you to choose a filename for your patched firmware. Once you have picked a filename, OmniPatcher will patch the firmware and save it.</p>
+<p><b>Note:</b> If you loaded a .EXE firmware, you will have the option in the save dialog to save it either as a .EXE firmware or to save it as a raw .BIN firmware.</p>
+
+<h3>Loading your patched firmware into your drive</h3>
+<p>If your patched firmware is an .EXE file, simply run the .EXE file to flash your drive with your custom-patched firmware. If your patched firmware is a .BIN file, you will need to use <a href="http://dhc014.rpc1.org/howto.htm#LtnFW">LtnFW</a> to load the firmware into your drive.</p>
+
+<h2>OmniPatcher Reference: Drive ID</h2>
+<p>In addition to displaying some basic information about the firmware that you have loaded, you are given the ability to rename the firmware's drive identification. Why would anyone want to do this? First, some people just prefer certain names. Second, some of the bundled software may be locked to a certain drive name. For example, the software bundled with Sony drive will work only if the drive identifies itself as a Sony drive. This way, you can load a LiteOn firmware onto a Sony drive without losing the Sony drive identification.</p>
+
+<h2>OmniPatcher Reference: DVD Media Support (only for DVD-writers)</h2>
+<h3>Adjusting write speeds</h3>
+<p>This is what was formerly known as &quot;speedhacking.&quot; In case you are not familiar with it, this will allow you to specify what speeds your burner will allow you to burn certain media at. This is the tool to use if you want to enable 8x burning on 4x-certified media, for example. To use this, simply scroll down the list until you find the <a href="http://club.cdfreaks.com/showthread.php?t=93797">media code</a> corresponding to the media that you are using and highlight it. And then on the right, you can select what speeds the drive will allow you to burn the selected media type at. Please note, however, that not all disc types can burn well at higher-than-rated speeds, and this is especially true for low-quality media. And then there are some media types (like the ever-popular <span class="mcode">RICOHJPNR01</span>) that actually burn <i>better</i> at the higher 8x speeds. This is why you, the user, are given the option to choose which discs you want to allow overspeeding on--try out different speeds and see what works best for your drive/media combination.</p>
+<p>A common question that gets asked is why this does not allow people to burn above 4x on their 4x-rated burners. Changing the speed limits for media types is different from <a href="http://codeguys.rpc1.org/oc.html">overclocking (crossflashing) your drive</a>. The latter is when you change your drive's maximum speed allowable speeds, and this tool allows you to then select which of the available types of media the drive will allow to be burned at that maximum speed.</p>
+<p><b>Warning:</b> Although it is possible to overspeed +RW discs, it is <b>not</b> recommended! You could potentially ruin your disc! -RW overspeeding is a bit safer.</p>
+
+<h3>Renaming media codes</h3>
+<p>Simply select the media code that you wish to rename and edit its MID, TID (for +R only) and RID using the text input boxes on the right. This may be useful if you want to add support for a media type that is unsupported. The way you would do this is to rename an unused code to the code of the unsupported media type and <i>then use strategy reassignment to assign it a suitable write strategy</i> (this last step is important!).</p>
+<p>Another use for this feature is to simulate strategy reassignment on firmwares where strategy reassignment is not supported. If, for example, you wish for <span class="mcode">RICOHJPNR01</span> to use the <span class="mcode">RICOHJPNR02</span> write strategy, then you would rename <span class="mcode">RICOHJPNR01</span> to <span class="mcode">RICOHJPNR02</span> and <span class="mcode">RICOHJPNR02</span> to <span class="mcode">RICOHJPNR01</span>. This would cause <span class="mcode">RICOHJPNR01</span> to use the <span class="mcode">RICOHJPNR02</span> write strategy, but the unfortunate side-effect is that <span class="mcode">RICOHJPNR02</span> now uses the <span class="mcode">RICOHJPNR01</span> write strategy. As a result, if strategy <i>reassignment</i> is available, it is highly recommended that you use that instead of these crude strategy <i>swaps</i>.</p>
+
+<h3>Write strategy reassignment</h3>
+<p><b>Introduction:</b> Each media code in the firmware has a &quot;write strategy&quot; assigned to it that will tell the burner how a piece of media should be burned. These write strategies are very closely tied to the burn quality of the media that you feed the drive. In many cases, the write strategy already in place for a particular media code is the best one to use. Using a write strategy that is very badly suited for a media type will most likely result in a bad burn and might potentially have negative effects on the laser of your drive, so going around reassigning write strategies at random is usually not a good idea, especially if the one specially designed for that media type already works well. However, there are some cases (especially when overspeeding) where using the write strategy for another media type will help improve burn quality. For example, overspeeding a <span class="mcode">PRODISCR02</span> to 8x using the <span class="mcode">PRODISCR02</span> code will most likely result in a coaster once the disc hits the 6x and 8x regions of the burn. However, if a <span class="mcode">PRODISCR03</span> strategy is used, the disc will burn much better when oversped to 8x.</p>
+<p><b>How to do this:</b> <i>Double-clicking</i> on a <b>+R or -R</b> media code (not RW!) should bring up a list of available write strategies that you can use for this media code. The write strategy currently in use will be highlighted. In the main window, any media code that is using a write strategy other than its own will be marked with a &quot;!&quot;. The text below the media list will specify what media types strategy reassignment is available for in this particular firmware (none--when grayed out, +R only, -R only, or both +R and -R).</p>
+<p><b>Note:</b> <i>Unlike</i> write strategy <i>swaps</i>, these <i>reassignments</i> are much more elegantly implemented, and they do <b>not</b> carry any ill side-effects for the &quot;host&quot; media code. Also, the speed codes are actually considered to be a part of the write strategy. So you will also be reassigning your speed code as well. For example, if you reassign <span class="mcode">PRODISCR02</span> to use <span class="mcode">PRODISCR03</span>'s write strategy, <span class="mcode">PRODISCR02</span> will also use <span class="mcode">PRODISCR03</span>'s speed code. In this example, this would mean that any changes to <span class="mcode">PRODISCR02</span>'s speed code using OmniPatcher will have no effect on <span class="mcode">PRODISCR02</span>'s speed, and any changes to <span class="mcode">PRODISCR03</span>'s speed code using OmniPatcher will affect both <span class="mcode">PRODISCR03</span> and <span class="mcode">PRODISCR02</span>'s speeds.</p>
+
+<h3>Recommended tweaks</h3>
+<p>These pre-defined speed adjustments and write strategy reassignments are ones that are generally known to work well. As the name suggests, applying them is usually a good idea.</p>
+
+<h3>The &quot;More Commands&quot; button</h3>
+<p><b>Save DVD media code report:</b> This will allow you to save a report of the media support list for the currently loaded firmware to a text file, which is useful for reference, easy searching, etc.</p>
+<p><b>Import speed and strategy settings from a report file:</b> This command will load a report file and apply the media settings found in that report to the current firmware. When you save a media code report, the report will include any speed and/or strategy reassignment changes that you have made to the firmware's media support. Thus, this feature may be useful if you want to apply the changes that you made to one firmware to another firmware. For example, if you made a number of changes to the <span class="fwrev">CS0K</span> firmware and want to make those same changes to the <span class="fwrev">CS0M</span> firmware, you can use OmniPatcher to load the patched <span class="fwrev">CS0K</span> firmware and order it to save a media code report. Then, you can load the <span class="fwrev">CS0M</span> firmware and use this command to load the media report for the patched <span class="fwrev">CS0K</span> firmware and apply to <span class="fwrev">CS0M</span> any changes that you made to <span class="fwrev">CS0K</span>.</p>
+<p><b>Rename this code using a media code block dump:</b> This will allow the user to rename the currently-selected media code using the <i>media code block</i> of a disc, which can be obtained through programs such as <a href="http://dvdidentifier.cdfreaks.com/">DVD Identifier</a>. This will make the renaming of codes to add support for unsupported media easier.</p>
+<p><b>Reset media ID and speed changes for this code:</b> This command will reset any name and speed changes that you have made to the currently-selected media code. Note that this command resets only name and speed changes and not write strategy reassignments. Also note that this command resets only the changes that you made since loading the firmware (i.e., any changes made prior to loading the firmware will not be reset). This command is useful if you want to undo the changes that you made to a media code, but do not remember what those changes were and do not want to re-load the firmware (which would, of course, reset all changes).</p>
+
+<h2>OmniPatcher Reference: General Patches</h2>
+<h3>Fix bitsetting support</h3>
+<p><b>Availability:</b> only for certain DVD-writer firmwares that have broken bitsetting</p>
+<p>This option will fix the broken bitsetting support on firmwares where it is known to be broken. Early 812S-class firmwares dating from mid-April of 2004 and earlier and certain Sony 3S-class firmwares are affected by this. This patch supersedes our (now-obsolete) bitsetting-fix mini-patchers.</p>
+
+<h3>Enable auto-bitsetting</h3>
+<p><b>Availability:</b> only for DVD-writer firmwares that have bitsetting and that cannot remember the setting after a reboot</p>
+<p>Auto-bitsetting is probably best explained by this: &quot;<b>Without</b> auto-bitsetting, your drive <b>will not</b> set the book type of your +R/+RW/+R9 burns unless you explicitly tell it to. <b>With</b> auto-bitsetting, your drive <b>will</b> set the book type of your +R/+RW/+R9 burns unless you explicitly tell it <b>not</b> to.&quot; Just as you can turn on bitsetting on a drive without auto-bitsetting by using the official LiteOn bitsetting tool, you can turn off bitsetting on a drive with auto-bitsetting by using the official LiteOn bitsetting tool.</p>
+<p><b>Note:</b> The auto-bitsetting patch is disabled for the newer firmwares that can remember the bitsetting settings after a reboot.</p>
+
+<h3>Use a multi-color LED color scheme</h3>
+<p><b>Availability:</b> only for DVD-writer firmwares of the 3S-class and Sony DVD-writer firmwares of the 2S-class</p>
+<p>Standard LiteOn firmwares for drives older than the 1213S had a much more descriptive LED color scheme that involved multiple colors. Sony firmwares and LiteOn firmwares for the 1213S and newer use a single color, even though the hardware for multiple colors is still there. This patch will re-enable the multi-colored LED. Unfortunately, the hardware for the multi-colored LED was removed starting with the 1673S, so this patch is applicable only for 3S-class firmwares before the 1673S and for 2S-class Sony firmwares.</p>
+<p><b>Note:</b> There may be a few 1633S/1653S-class drives that, like the 1673S and newer drives, lack a red LED. If, after applying this patch and flashing the patched firmware, the LED does not turn red when you are burning a CD or DVD, then your drive is missing the red LED.</p>
+
+<h3>Disable the signal for the IDE activity indicator light</h3>
+<p><b>Availability:</b> only for certain non-slimtype Sony DVD-writer firmwares</p>
+<p>There is a &quot;feature&quot; in some Sony firmwares that will cause the drive to send an IDE activity signal whenever the LED blinks, which would cause the computer's IDE activity indicator (which is normally used only by hard drives) to blink whenever the optical drive's LED blinks. This is most easily observed when the hard drive light blinks in perfect unison with the optical drive's LED. This patch will disable this behavior.</p>
+
+<h3>Earlier shift (faster burn) for 8x +R</h3>
+<p><b>Availability:</b> only for the LDW-811S, LDW-851S, and SOHW-8x2S (or equivalent) DVD-writer firmwares</p>
+<p>This was one of the two components that made up what used to be called a &quot;burn-adjusted&quot; firmware. This patch will cause your drive to shift into higher speeds earlier and more aggressively, thus speeding up the burn. On some burners, this aggressive shifting may result in lower-quality burns, which is why it is highly recommended that you experiment with it and see if it works well for your particular drive. If it does not, then do not use it. If you select this, then you should also select the &quot;force-shifting&quot; patch (if it is available; for some firmwares, such as the _11S firmwares, &quot;force-shifting&quot; is not needed, nor is it an available option).</p>
+
+<h3>Utilize &quot;force-shifting&quot; for 6x/8x burns</h3>
+<p><b>Availability:</b> only for the LDW-851S and SOHW-8x2S (or equivalent) DVD-writer firmwares</p>
+<p>This, along with the earlier shift patch (see above), made up the &quot;burn-adjusted&quot; firmwares. In some firmwares, there are OPC checks that are run at the 6x and 8x shift points. If the drive decides that the OPC result is too bad, it will cancel the upshift and wait until later before shifting. This resulted in slower burns, and because of a problem with laser calibration in some of the firmwares (though this problem seems to have disappeared in the newer firmwares), a failed upshift would actually result in higher errors (which is ironic, since the whole point of this check is to reduce errors). This patch will make the OPC check less sensitive, avoiding the failed upshift in most cases. The primary purpose of this patch is to speed up burns by eliminating the unnecessary slowdowns, though <i>sometimes</i>, this has a secondary side-effect of improving burn quality. Like the patch above, it is recommended that you try this out and see if it works well for your particular drive.</p>
+
+<h3>Utilize &quot;force-fallback&quot; for 8x +R</h3>
+<p><b>Availability:</b> only for the LDW-851S and SOHW-8x2S (or equivalent) DVD-writer firmwares</p>
+<p>This patch will force the drive to drop its speed towards the end of a 8x +R burn. Selecting this option will <b>slow down</b> your burns (in fact, <i>getting rid</i> of this end-of-disc fallback was the goal of some of our earlier patching work). We have found that there are a number of cases where such fallbacks may be a good idea, so this option has been made available. If you find that the error rates for your burns suffer from a &quot;mountain effect&quot; at the end, this patch may be worth trying out.</p>
+
+<h3>Disable media learning</h3>
+<p><b>Availability:</b> only for DVD-writer firmwares</p>
+<p><b>This is an experimental patch!</b> All LiteOn drives will store a log of its four most recent burns in its non-volatile memory, and, over time, it will use this data to adjust its laser calibration. In most cases, this leads to better drive performance. However, there are cases where this process does not work correctly for some reason (sometimes, a bad burn can trip up the calibration data, for example). One solution to this problem is to use the <a href="http://codeguys.rpc1.org/utilities.html">EEPROM Utility</a> to reset the learned laser calibration data. Another solution is to use this patch to disable this process. Please note that this patch should <b>not</b> be utilized unless you are experiencing problems!</p>
+
+<h3>Fix the &quot;dead drive blink&quot; / Enable cross-flashing</h3>
+<p><b>Availability:</b> only for DVD-writer firmwares</p>
+<p>This patch serves two purposes. First, for people who have &quot;killed&quot; their drives using <i>RPCDE2</i> or <i>liteonutil</i>, this patch will fix the blinking light problem that results from this. Additionally, this patch can be used to enable <a href="http://codeguys.rpc1.org/oc.html">crossflashing</a> (e.g., 451S@851S and 812S@832S) in a firmware.</p>
+
+<h3>Disable &quot;SMART-X&quot; for DVDs</h3>
+<p><b>Availability:</b> only for DVD-ROM and DVD-ROM/CD-RW combo firmwares</p>
+<p>&quot;SMART-X&quot; is a feature of the drive that is designed to slow down DVD video <i>playing</i> speeds to 6x to reduce noise. <i>In theory</i>, it should <i>not</i> affect <i>ripping</i> speeds, but while it usually works as intended, it has been known to sometimes slow down speeds when it should not, so if you find that DVD video <i>ripping</i> is being slowed down to 6x, then you may wish to use the patcher to disable the &quot;SMART-X&quot; feature for DVDs. This will <b>not</b> have any effect on &quot;SMART-X&quot; for audio CDs.</p>
+<p>Since &quot;SMART-X&quot; works as intended most of the time, it is probably a good idea to not apply this patch unless it becomes necessary.</p>
+
+<h3>Set DVD Read Speeds</h3>
+<p><b>Availability:</b> for most DVD firmwares</p>
+<p>This will allow you to select and change the <i>read</i> speeds of various DVD media types.</p>
+<p>
+	&bull; <b>DVD-ROM/5</b>: Factory-pressed single-layer discs<br />
+	&bull; <b>DVD-ROM/9</b>: Factory-pressed dual-layer discs<br />
+	&bull; <b>DVD&plusmn;R</b>: Recordable single-layer discs<br />
+	&bull; <b>DVD&plusmn;RW</b>: Rewritable single-layer discs<br />
+	&bull; <b>DVD&plusmn;R9</b>: Recordable double-layer discs
+</p>
+<p><b>Note:</b> When overspeeding your drive's reading ability (i.e., setting the read speed faster than the original &quot;stock&quot; read speed), the fastest possible speed may not always be the best. For example, the SOHD-16P9S will usually struggle a little when reading dual-layer pressed DVD-ROMs at 16x (which is twice the stock speed of 8x), and if you find that this is the case with your drive, then you will probably get <i>better</i> overspeed read performance with a slightly slower, but more stable speed such as 12x or 14x. Additionally, how your drive performs when reading recordable/rewritable media at overspeed will depend on how well those discs were burned. <i>Just like overclocking a CPU, it is up to you to determine how much overspeeding your particular drive can handle for each media type</i>, keeping in mind that certain media types can overspeed more than others.</p>
+<p><b>Note:</b> For DVD-ROM firmwares, this feature is available only for stock firmwares or for firmwares that have been patched by OmniPatcher; our read-speed patched firmwares that were not patched by OmniPatcher will not work with OmniPatcher (use the stock firmware with OmniPatcher instead).</p>
+
+<h3>LED Blink Options</h3>
+<p><b>Availability:</b> only for non-slimtype DVD-writer firmwares of drives <i>newer</i> than the SOHW-1653S</p>
+<p>This should be fairly self-explanatory. The options here do not offer any real benefit, except to satisfy personal preferences.</p>
+
+<h2>Warning!</h2>
+<p>Please be aware that, as with any unofficial firmware that you load into any optical drive, if you load a firmware created by this tool into your drive, you will be voiding your warranty!</p>
+<p>OmniPatcher itself is fairly safe (we hope ;-)). There are many safeguards placed in OmniPatcher to check to make sure that the firmware is correctly patched. However, please do not hesitate to let us know if you encounter any unexpected problems. Also, as a general precaution, it is usually a good idea to make a backup of your drive's original firmware (using <a href="http://dhc014.rpc1.org/howto.htm#LtnFW">LtnFW</a>) and, when working with DVD-writers, the EEPROM (using the <a href="http://codeguys.rpc1.org/utilities.html">EEPROM Utility</a>).</p>
+
+</body></html>

@@ -1,0 +1,304 @@
+2.6.2 (10 Sep 2007)
+	* Added: New look to tab frame
+
+2.6.1 (28 Aug 2007)
+	* Added: Supports read speed patch for LITEON SHD-16S1S DVD-ROM ESxx firmware
+
+2.6.0 (27 Aug 2007)
+	* Added: Supports read speed patch for LITEON LTD-163D DVD-ROM GHRB firmware
+	* Added: New "Exit" button on main dialog
+
+2.4.8 (03 Apr 2007)
+	* Added: Recognizes and supports read speed patch for LITEON LH-16D1P DVD-ROM firmwares
+
+2.4.7 (15 Sep 2006)
+	* Added: Recognizes and supports read speed patch for later LITEON SHD-16S1S DVD-ROM firmwares
+
+2.4.6 (28 Jul 2006)
+	* Added: Recognizes and supports read speed patch for later SONY DDU1615 DVD-ROM firmwares
+
+2.4.5 (28 Jul 2006)
+	* Added: Recognizes and supports read speed patch for later 16P1S DVD-ROM firmwares
+
+2.4.4 (11 Apr 2006)
+	* Added: 16P1S DVD-ROM read speed patch allows 12x/16x for R9/ROM9 dual layer
+	
+2.4.3 (29 Dec 2005)
+	* Fixed: Read speed patch disabled with latest firmware releases
+
+2.4.2 (15 Aug 2005)
+	* Fixed: The crossflashing patch now works for KY04.
+	* Other: Updated the internal list of OEM rebadges.
+
+2.4.1 (3 Aug 2005)
+	* Fixed: Undamaged SOSW-833S firmwares are no longer mis-classified as damaged.
+
+2.4.0 (17 Jul 2005)
+	* Added: Drive renaming and DVD read speed support for LiteOn-based DVD-ROM and DVD-ROM/CD-RW combo drives.
+	* Added: Full support for 3rd-generation LiteOn-based slimtype DVD-writers (SOSW-8?3S and equivalents).
+	* Added: General information display for other LiteOn-based drives (no patching).
+	* Changed: Adjusted some of the on-screen text for better clarity.
+	* Changed: 1653S firmwares that have a 1633S name and 1633S security checksum (BYX?, BS41, and B8S3) are now classified differently.
+	* Changed: Tweaked the text for the IDE activity indicator light patch.
+	* Other: Changed the program name.
+	* Other: Updated the recommended tweaks list to 3-02.
+	* Other: Updated the internal list of OEM rebadges.
+	* Other: Updated documentation.
+	* Fixed: [v2.4.0.1] Fixed the incorrect maximum write speed limits for slimtype drives.
+	* Other: [v2.4.0.1] Write strategy reassignment has been verified for the SDW-431S; warning message removed.
+	* Other: [v2.4.0.2] Made a very minor tweak to the format of the media code report file.
+	* Other: [v2.4.0.2] Added an additional note to the read speed patching section of the documentation.
+	* Fixed: [v2.4.0.3] Restricted the characters displayed by OmniPatcher to the ASCII character set (0x00 to 0x7F) to fix display corruption problems on systems that use non-ANSI character sets (e.g., Chinese character sets) and made a few minor wording changes.
+	* Fixed: [v2.4.0.3] Drag-file-to-open will no longer be available when it is inappropriate (e.g., in the middle of another file open operation).
+
+2.3.1 (27 Jun 2005)
+	* Other: Improved the way OmniPatcher determines which read speeds it should allow the user to select.
+	* Other: Updated the internal list of OEM rebadges... yet again.
+	* Fixed: [v2.3.1.1] OmniPatcher's ability to remove a crossflashing patch (why would people be removing the patch in the first place?) was partially broken in 2.3.0; this has now been fixed.
+
+2.3.0 (25 Jun 2005)
+	* Added: Experimental write strategy reassignment support for slimtype drives.
+	* Added: LED blink options for 1673S and newer drives.
+	* Fixed: The read speed patch is now available for the PDS6 firmware.
+	* Fixed: Removed the faulty 10x option for DVD±R9 read speeds (10x for pressed DVD-DL is still available).
+	* Fixed: Resolved a few small potential bugs related to media support.
+	* Changed: Refined the way certain firmware revisions are displayed in the status area above the command buttons.
+	* Changed: Slightly changed how the default save name is constructed.
+	* Other: Improved some inefficient code to slightly improve OmniPatcher's load and save times.
+	* Other: Updated the internal list of OEM rebadges.
+
+2.2.2 (18 Jun 2005)
+	* Fixed: Updated the slimtype table scanner so that the final three entries of the -R table in PDS6 are no longer omitted by OmniPatcher.
+	* Other: [v2.2.2.1] Updated to Perl 5.8.7 and switched the icon back to the original chip icon (who was I to break with tradition? ;-)).
+
+2.2.1 (18 Jun 2005)
+	* Fixed: Changed the captions of the two LED-related patches (enable multi-colored LED and IDE indicator blink fix) for better clarity and to correct an error in the choice of words.
+	* Other: Updated the internal list of OEM rebadges.
+
+2.2.0 (16 Jun 2005)
+	* Added: "Fix IDE blink problem" to address an issue with some Sony firmwares where the drive's LED blink would cause the hard drive's LED to blink in unison.  This used to be a part of the general LED-fix patch, but by separating it, this patch can now be used by 7/93S users and by people who want this fix but who do not want the tri-color fix.
+	* Changed: "Fix LED colors" has been renamed to "Use a tri-color LED color scheme" for the sake of clarity.
+	* Fixed: Addressed a potential crashing bug with opening firmwares in integrated flashers.
+	* Other: Updated the internal list of OEM rebadges.
+
+2.1.0 (14 Jun 2005)
+	* Added: The ability to rename a media code using a media code block import, like in MCSE.
+	* Improved: The read speed and disable learning patches are now available for slimtype drives.
+	* Changed: The button to save a media report has been removed; the function is now a part of the "More Commands" button, which has been moved to take its place.
+	* Other: Updated the internal list of OEM rebadges.
+
+2.0.1 (13 Jun 2005)
+	* Added: An "Extended Commands" button in the media tab.  This will bring up a menu of additional commands: load media settings from a media report and undoing name/speed changes to a media code.
+	* Improved: Slightly mitigated the GUI refresh lag when loading a new firmware.
+	* Fixed: To work around a quirk with how Windows re-draws text boxes, the media info box is no longer set to read-only on Windows 2000 and earlier.
+	* Fixed: Minor problem with 51S firmwares being misclassified as 1S and not 2S firmwares when applying recommended tweaks.
+	* Fixed: Minor wording correction in the tweaks message box.
+	* Other: Updated documentation.
+	* Fixed: [v2.0.1.1] Improved the determination of current read speeds when loading firmwares that have been previously patched with OmniPatcher 1.x.
+	* Fixed: [v2.0.1.3] Better, less restrictive handling of firmwares that have non-Unicode +R entries that use 9-bit speed encoding.
+
+2.0.0 (12 Jun 2005)
+	* Note: Version 2 is a major re-write.  The internals have been completely re-worked, and virtually every line of code was rewritten, with the goal of making OmniPatcher more robust and more maintainable.
+	* Added: "Fix bitsetting support" patch (this supersedes both of the now-deprecated bitsetting-fix mini-patchers).
+	* Added: "Fix LED colors" patch.
+	* Added: "Disable media learning" patch (experimental).
+	* Added: Ability to rename media codes.
+	* Added: Ability to rename a drive to one of its equivalent OEM names.
+	* Added: Ability to specify a file for OmniPatcher to load from the command line (which allows Windows to associate .BIN files with OmniPatcher, if so desired).
+	* Added: Ability to load a file by dragging it into the OmniPatcher window.
+	* Added: Command line flag to dump OmniPatcher's event log for troubleshooting.
+	* Improved: Completely new interface.
+	* Improved: New and improved reading speed patch and interface.
+	* Improved: Irrelevant patches are now hidden to avoid confusion.
+	* Improved: Saving a file or a media code report now provides a default save name.
+	* Improved: New strategy reassignment patch routines.  Now, if there is insufficient space in a given bank, strategy reassignment will be disabled for only that bank and not for the entire firmware.  Also fixed a minor bug with some of the 3S patches.
+	* Improved: Both the standard and internal firmware revisions are now reported (OmniPatcher used to report only the internal revision).
+	* Improved: Drive type detection has been refined slightly.
+	* Improved: The format for the media code report has been improved slightly.
+	* Removed: The rec_tweaks.conf file is no longer used.  The list of tweaks is now embedded in the executable.  Since the tweaks file is being updated about as frequently as OmniPatcher, it does not make sense to have it as a separate download.
+	* Fixed: The [ENTER] and [ESC] keys now work correctly in the pick-a-strategy dialog box.
+	* Other: Updated documentation.
+	* Other: Tweaked the program name slightly.
+	* Other: Updated build libraries.
+
+1.4.3 (30 May 2005)
+	* Other: Updated the compilation process.  OmniPatcher should look a lot better now on computers using the Windows XP Luna theme.
+	* Other: Updated some of the supporting code.
+	* Removed: OmniPatcher will no longer FlashFix a flasher.
+
+1.4.2 (1 May 2005)
+	* Improved: There is now a lot more information displayed in the firmware information dialog.
+	* Changed: New formatting in the media report.
+	* Changed: 1673S -R9 media is now displayed in the media report with no speeds allocated.
+
+1.4.1 (20 Apr 2005)
+	* Added: Support for firmwares that have -R9 media.
+
+1.4.0 (12 Apr 2005)
+	* Added: 16x reading speed patch for 3S drives.
+	* Other: Removed experimental message.
+
+1.3.20b (10 Apr 2005)
+	* Other: Removed 1673S experimental warning (no problems were reported).
+	* Other: Updated the Win32 GUI and EXE builder.
+	* Fixed: 1653S firmwares now display all media.
+
+1.3.18c (16 Jan 2005)
+	* Fixed: Problem with loading the 6S07 firmware (slimtype).
+
+1.3.18b (29 Dec 2004)
+	* Fixed: Improved media table processing for latest 3S firmwares.
+
+1.3.18a (19 Dec 2004)
+	* Fixed: Improved media table processing for latest 3S firmwares.
+	* Improved: The crossflashing patch checkbox is now checked and disabled (vs. unchecked and disabled) if opening a firmware with a forced crossflash (e.g., CGxx).
+
+1.3.18 (3 Dec 2004)
+	* Fixed: OmniPatcher now supports the new 14/28-byte +R table format used in BYX2.
+
+1.3.17a (27 Nov 2004)
+	* Fixed: Crash when loading TSD1.
+
+1.3.17 (24 Nov 2004)
+	* Fixed: Since LiteOn has decided to make the 1633S a 12x -R burner, the 12x -R checkbox is no longer hidden for 1633S firmwares.
+	* Fixed: Reworked the handling of speeds for slimtype drives.  Thanks go to those who tested.
+
+1.3.16b (19 Nov 2004)
+	* Fixed: OmniPatcher no longer incorrectly warns about not finding enough tables when loading the BY02 firmware.
+
+1.3.16a (14 Nov 2004)
+	* Improved: The reading speed patch checkbox is now checked and disabled (vs. unchecked and disabled) if the patch cannot be applied because all of the speeds are already at the maximum.
+	* Fixed: The 4x -RW checkbox is no longer hidden for 1S drives.
+	* Other: Adjusted the compilation process to produce a slightly smaller executable.
+	* Other: Updated documentation to specify that some of the patches (the ones that always appear disabled with 3S firmwares) are intended for only the 1S and 2S drives.
+
+1.3.16 (11 Nov 2004)
+	* Added: Basic media support for the slimtype drives.
+	* Added: Experimental support for the 1673S.
+	* Added: Crossflashing support for 401S@411S.  This feature would most likely never see much use, but since ala42 was kind enough to supply the patch information, it might as well be added. :-)
+
+1.3.15 (8 Nov 2004)
+	* Added: Media support for the 1653S.  OmniPatcher now fully supports the 1653S.
+	* Fixed: Issues with certain 1633S firmwares (such as BS06 and B4S6) have been fixed.
+	* Other: General improvements (mostly under-the-hood changes) including better handling of speed limits.
+
+1.3.14 (1 Nov 2004)
+	* Fixed: Increasing reading speed to 12x now works correctly for the 1653S.
+	* Added: Crossflashing support for slimtype drives.
+	* Added: Crossflashing support for the 1653S.
+	* Added: Reading speed and auto-bitsetting support for the 1653S.
+	* Added: Crossflashing support for _51S@8_2S.
+	* Other: Switched to a different compiler, resulting in a smaller file size.
+
+1.3.13 (2 Oct 2004)
+	* Added: A new "Info" button that displays general information about the loaded firmware.
+	* Fixed: OmniPatcher crashing upon startup on Windows 2000. (thanks, rdgrimes)
+	* Other: Modified (once again) the formatting of the media codes report.  By request, the OmniPatcher version is now included in the report file.
+
+1.3.12 (27 Sep 2004)
+	* Other: Updated one of the libraries used to build the executable.
+
+1.3.11 (23 Sep 2004)
+	* Fixed: Problems with speedhacking beyond 12x with firmwares BS02 and newer.
+	* Fixed: Problems with speedhacking beyond 8x with firmwares BS0D and newer.
+	* Fixed: Problems with the recognition of 12x and 16x speed descriptors when reading firmwares BS0D and newer.
+	* Improved: The media codes report generated by OmniPatcher will now show the drive's vendor and product ID strings.
+	* Improved: The text of the reading speed patch checkbox now displays the appropriate numerical speed based on which firmware generation is loaded.
+
+1.3.10 (10 Sep 2004)
+	* Fixed: Some media table recognition problems in the 1633S firmwares.
+	* Improved: OmniPatcher will now issue a warning if it doesn't recognize as many media tables as it thinks it should.
+	* Improved: The media codes report generated by OmniPatcher will now show the firmware's internal timestamp (the file last-modified timestamp was removed).
+
+1.3.9 (15 Aug 2004)
+	* Added: Increase reading speed to 12x for 3S firmwares.
+	* Improved: OmniPatcher will now display the true firmware revision.
+	* Improved: The media code report format has been revised somewhat.
+	* Fixed: Strategy switching works for TS0C.
+	* Fixed: 6x/8x -R speeds are no longer shown for 1S firmwares, 12x/16x -R speeds are no longer shown for 3S firmwares, and 16x +R speeds are no longer shown for 1213S firmwares.
+
+1.3.8 (26 Jul 2004)
+	* Added: Force-fallback.
+	* Removed: Force-recalibration.
+	* Fixed: RW speed selection for the 3S drives no longer incorrectly displays invalid 6x and 8x options.
+	* Fixed: Very minor issue with loading a rec_tweak.conf file with invalid entries.
+
+1.3.7 (24 Jul 2004)
+	* Added: Support for the 1613S/1633S.
+	* Other: Made a few minor regexp enhancements and cleanups.
+
+1.3.6 (22 Jul 2004) (unreleased)
+	* Other: Made a minor adjustment to the "force-shifting" patch.
+	* Other: Added warning message to the "force-recalibration" patch.
+	* Other: Made a couple of very minor wording tweaks.
+
+1.3.5 (18 Jul 2004)
+	* Fixed: Fixed the 3S strat switching problem introduced in 1.3.4.  A safeguard that was introduced in 1.3.4 was too strict, causing this problem.
+
+1.3.4 (18 Jul 2004)
+	* Added: Support for auto-bitsetting for the 3S drives.
+	* Added: Force-recalibration patch that will force the drive to recalibrate its laser towards the end of a 8x +R burn.  This is intended for people with high climbing error rates at the end of burns.
+	* Removed: Force-fallback.
+	* Fixed: Strategy swapping on the US0J firmware is no longer improperly handled (this bug does not seem to affect any firmwares other than US0J).
+	* Other: The "blinking orange light" label has been renamed to "dead drive blink" in order to reduce confusion with buffer underrun blinks and with drives that use other colors.
+	* Other: Made a minor adjustment to the "force-shifting" patch.
+
+1.3.3 (10 Jul 2004)
+	* Other: Slightly changed the way OmniPatcher gives warnings.
+	* Other: Added error message if the recommended tweaks button is clicked and there is no recommended tweaks file present.
+	* Other: Minor updates to some of the build libraries.
+
+1.3.2 (8 Jul 2004)
+	* Added: Force-fallback patch that will slow down high-speed +R burns at the end.  This is intended for people with high climbing error rates at the end of burns.
+	* Added: There is now a note about the use of the double-click in the interface.
+	* Added: Warning message when trying to modify the speeds of +RW media.
+	* Improved: The old "Apply recommended write strategy replacements" feature has been overhauled and renamed.
+	* Improved: The formatting of the media code report has been refined.
+	* Improved: The sorting of +R/W media codes into +R and +RW has been improved (this fixes a sorting problem with a few of the old firmwares).
+	* Fixed: Loading an incompatible firmware could, under certain circumstances, cause OmniPatcher to crash.  This has been resolved.
+	* Other: The handling of disallowed speeds has been changed.  Instead of disabling them, they are now hidden to reduce clutter.
+	* Other: Minor changes in some texts throughout the program, including a renaming of "shift-fixing" to "force-shifting".
+	* Other: The documentation was revised.
+
+1.3.1 (6 Jul 2004)
+	* Fixed: When removing (unpatching) strategy replacements from a patched firmware, the removal would not always be successful.  The bug causing this has been fixed.
+
+1.3.0 (5 Jul 2004)
+	* Added: Ability to do write strategy replacements. (unlike swaps, replacements do not carry the ill side effects to the "host" code)
+	* Improved: The media code report format has been improved for better readability.
+	* Improved: The handling of the RICOHJPNR00 firmware bug has been changed.
+	* Fixed: Very minor bug with the media speed hacking process.  This bug was minor in the sense that it would almost never be triggered.
+	* Fixed: Very minor bug in the file saving process.  This bug did not affect the saved file.
+	* Fixed: For the sake of clarity and consistency, 'DL' was renamed to 'R9' in the reading speed patch description.
+
+1.2.0 (28 Jun 2004)
+	* Removed: No more support for scrambled/compressed flashers.  OmniPatcher will no longer work with these flashers.
+	* Improved: Optimized code for faster file loading.
+	* Fixed: Minor problems with detecting the flasher type.
+	* Fixed: The crossflashing checkbox is now disabled for GSU1 and GSC_ (it never had any effect on these firmwares anyway).
+
+1.1.2 (16 Jun 2004)
+	* Fixed: File open error in Windows 9x/ME (does not affect 2K/XP).
+
+1.1.1 (16 Jun 2004)
+	* Fixed: Problems with opening certain .EXE files.
+
+1.1.0 (15 Jun 2004)
+	* Added: Ability to save an executable firmware flasher as a raw firmware (.BIN).
+	* Added: New feature: all executable firmware flashers are now FlashFixed when saved (FF does not alter the firmware).
+	* Other: Updated the XFlash-X libraries used to build the executable; OmniPatcher can now much better handle executable firmware flashers.
+
+1.0.3 (11 Jun 2004)
+	* Fixed: Bug with hacking writing speeds on *13S firmwares.
+
+1.0.2 (11 Jun 2004)
+	* Fixed: OmniPatcher can now correctly handle the new *13S firmwares.
+
+1.0.1 (10 Jun 2004)
+	* Added: Ability to save a report of the media codes to a text file.
+	* Fixed: Color problems with the Windows XP "Luna" theme.
+	* Fixed: The documentation now warns against +RW speedhacking.
+	* Other: Changed/updated the libraries used to build the executable.
+
+1.0.0 (6 Jun 2004)
+	* First version.
