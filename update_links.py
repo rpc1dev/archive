@@ -22,9 +22,11 @@ def main(argv):
                     cursor.execute('SELECT url FROM links WHERE path LIKE "%%%s"' % h)
                     record = cursor.fetchone()
                     if record is None:
-                        a['href'] = '!!BROKEN LINK!! (was \'%s\')' % h
+                        newref = '!!BROKEN LINK!! (was \'%s\')' % h
                     else:
-                        a['href'] = record[0]
+                        newref = record[0]
+                    a['href'] = newref
+                    sys.stderr.write('Updated %s → %s\n' % (h, newref))
             print(str(soup))
 
         cursor.close()
@@ -39,4 +41,4 @@ def main(argv):
             connection.close()
 
 if __name__ == "__main__":
-   main(sys.argv[1:])
+    main(sys.argv[1:])
