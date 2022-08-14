@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Flash your SD-C2202</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#CCCCFF">
+<div align="center"> 
+  <p><font face="Arial, Helvetica, sans-serif"><i><b><font size="4">How to flash 
+    your Toshiba SD-C2202 firmware to RPC-1 firmware</font><font size="2"></font></b></i></font></p>
+  <hr>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Carefull 
+    these firmware update are ONLY for the Toshiba SD-C2202. Using these firmware 
+    with any other model would make your drive unusable. The Toshiba SD-C2202 
+    is a model 4X/24X, present in many laptop, in particular those from Sony, Toshiba, 
+    HP, IBM, Dell, Asus... </font></p>
+  <hr>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><i><font size="3">How 
+    to know your firmware version and know if your drive is locked</font></i></b></font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Use the <a href="http://perso.club-internet.fr/farzeno/dvdf/driveinfo.zip">Driveinfo 
+    1.02</a> utility.<br>
+    In fact, there is some 2202 who are shipped originaly with unlocked RPC-1 
+    firmware (it's very rare). That will be stupid to flash a drive who is already 
+    unlocked.</font></p>
+  <table width="61%" border="0">
+    <tr> 
+      <td width="50%"> 
+        <p><img src="image001.png" width="259" height="237"><br>
+          <font size="2"><b><font face="Arial, Helvetica, sans-serif">Bad luck! 
+          You have to flash your drive.</font></b></font></p>
+      </td>
+      <td width="50%"><img src="1Q13.gif" width="264" height="240"><br>
+        <font size="2" face="Arial, Helvetica, sans-serif"><b>You are lucky don't 
+        flash your drive. You just need to unlock your DVD software </b></font></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <hr>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2"><i><b><font size="3">Know 
+    if your drive is in master or slave position.</font></b></i></font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">The Toshiba 
+    SD-C2202 has a big problem (other laptop DVD players too), it don't have any 
+    jumper to set the drive in master or slave position. In fact, this position 
+    is stored in the firmware himself. The firmware 1R17 is a master firmware, 
+    and 1T17 a slave one.<br>
+    To know very easily your drive position use the utility <b><a href="http://perso.club-internet.fr/farzeno/dvdf/mhsys.zip">Mhsystat 
+    1.03</a>. </b><br>
+    Start the utility and select the SCSI/ATAPI button.<br>
+    If your drive is in position 0, it's a master drive go to the next part to 
+    load the 1R17 firmware.<br>
+    If your drive is on 1 it's a slave drive, you will have to use the 1T17 firmware.</font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2"><img src="1021mh.gif" width="523" height="476"><br>
+    <b>Here the drive is in master position</b></font></p>
+  <hr>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><i><font size="3">Flash 
+    the firmware</font></i></b></font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">After the 
+    Master/slave verification you have now to load your correct firmware.</font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><a href="http://perso.club-internet.fr/farzeno/dvdf/1r17rpc1.zip">Special 
+    1R17 firmware</a></b> for drives originaly in master position.<br>
+    <b><a href="http://perso.club-internet.fr/farzeno/dvdf/1t17rpc1.zip">Special 
+    1T17 firmware</a></b> for drives originaly in slave position</font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">You have 
+    just to extract the files on a floppy and boot on it (sometime, you will have 
+    to make some changes in your laptop BIOS to boot on a floppy).<br>
+    Before flashing be sure there is no disc in the DVD drive.<br>
+    Connect your laptop to the AC power (more secure). <br>
+    </font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Now flash 
+    your drive!</font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Warning!!! 
+    Flashing a firmware is a very sensitive operation. Don't move the mouse and 
+    don't touch your keyboard during the flash, and DO NOT STOP in any case the 
+    flash utility when started, you could damage your drive definitively. REMEMBER: 
+    This is at your own risk!!!! </font></p>
+  <hr>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><i><font size="3">Verify 
+    the drive flashed correctly</font></i></b></font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2"><br>
+    Once back to Windows, check your drive with driveinfo.<br>
+    Go also to the configuration panel, click on system, select your DVD. Click 
+    on the DMA option if unchecked. That will improve greatly your drive performance.</font></p>
+  <table width="75%" border="0">
+    <tr> 
+      <td><img src="1R17.gif" width="265" height="238"><br>
+        <font face="Arial, Helvetica, sans-serif" size="2"><b>Region free!!</b></font><font face="Arial, Helvetica, sans-serif"><br>
+        </font> </td>
+      <td><img src="image011.png" width="356" height="421"><br>
+        <font face="Arial, Helvetica, sans-serif" size="2"><b>Check the DMA option</b></font></td>
+    </tr>
+  </table>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Your drive 
+    is now region free!!</font></p>
+  <hr>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2"><b><i><font size="3">Unlock 
+    your DVD software</font></i></b></font></p>
+  <p align="left"><font face="Arial, Helvetica, sans-serif" size="2">Of course 
+    some dumbs will say me &quot;hey, i have flashed my drive but i still can't 
+    play other region DVD&quot;. Of course you have also to unlock your DVD software.<br>
+    The DVD players generally shipped with laptop are hard to unlock. There is 
+    2 region changer available :</font></p>
+</div>
+<ul>
+  <li> 
+    <div align="left"><font face="Arial, Helvetica, sans-serif" size="2">IBM thinkpad 
+      Region Changer - For Thinkpad 770DVD,but in fact should works with other 
+      IBM laptop </font></div>
+  </li>
+  <li> 
+    <div align="left"><font face="Arial, Helvetica, sans-serif" size="2">DVD Region 
+      Wizard – Toshiba laptop</font></div>
+  </li>
+</ul>
+<p align="left"><font face="Arial, Helvetica, sans-serif" size="2">These utilities 
+  are available at <a href="http://www.dvdutils.com">http://www.dvdutils.com</a></font></p>
+<p align="left"><font face="Arial, Helvetica, sans-serif" size="2">For other my 
+  recommendation for you is to use the excellent PowerDVD 2.55 and use DVD genie 
+  available at <a href="http://www.inmatrix.com">www.inmatrix.com</a></font></p>
+<hr>
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="2">©1998-2000 
+  The firmware page [ http://www.firmware.com.bi ] - All Rights Reserved. The 
+  informations provided in this page may not be reproduced/published anywhere 
+  else without the written permission of The Firmware page </font></p>
+<p align="center">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+</body>
+</html>

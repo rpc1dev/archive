@@ -1,0 +1,13 @@
+F/W 1.11 --> 1.22 Revision History
+
+1. When drive load the packet recorded disc having more than 10 tracks, 
+   drive transfer illegal data of sector which is in track 10 or more outer track.
+   This problem was solved.
+2. In above situation, sometimes CD playability is decreased. This problem was solved.
+3. Stability of setup sequence is improved.
+4. With Intel D815EEA,VC820 motherboard, drive was not recognized by BIOS.
+   This problem is solved.
+5. The BUG of Execute Drive Diagnostic is solved.
+6. When 8cm DVD with 12cm Adapter is inserted, drive goes the hi-rotation speed.
+   This problem is solved.
+7. When temperature is high, readability of DVD dual layer disc is improved.

@@ -1,0 +1,12 @@
+Here is the patched 2.00 F series patch for 6xSCSI drives.
+Warning!
+The originally released 2.0 firmware for SCSI it seems to be fully RPC2. Its possible after update
+the drive will be definitively RPC2 indiferent from RPC jumper position!!! 
+Some words about new Pioneer strike-back!
+This new 2.x firmwares has very good protection system against my patches. I work to resolve
+of an update for users who have already 2.x version. Momentary it NOT POSSIBLE TO RE-FLASH
+the same firmware version (the modifying of the version number is not enough!) My 2.x patches converts the drives to RPC1 but not allow re-flashing to older or same version. (The defense system is active). The new 2.x firmwares is TOTALLY STRIKE BACK FROM PIONEER against my patched firmwares!
+Stay tuned for best resolution....
+ 
+Fekete Istvan
+ 

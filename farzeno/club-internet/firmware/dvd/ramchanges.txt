@@ -1,0 +1,34 @@
+Firmware changes for Panasonic DVD-RAM LF-D100/101/102/103
+
+
+A120 : This firmware is needed if you want to use the Panasonic win2000 DVD-RAM driver. 
+
+A116:
+Fix: Reading PD even if the PD disc have bad sectors.
+Fix: Reading CD-R if the CD-R is formatted by CD-RFS.
+This firmware is needed if you want to use the Panasonic NT4.0 DVD-RAM driver. 
+
+A114:
+Upgrade: The automatic dirty check of the laser pickup and the discs.
+Fix: Rare case of error stop, when transferring data is stopped if you are recording big capacity data.
+
+A113:
+Fix: A nearly full CD-ROM which has a narrow track pitch caused errors. This
+bug is fixed by this revision
+   
+A112:
+Fix: If the regional codes of a drive and a DVD differ, the disc was
+detected as an audio CD under a Windows environment. This bug is fixed
+by this revision.
+
+A110:
+Fix: Some CD-ROM's were detected as audio CD's. This bug is fixed by this
+revision.
+
+A109:
+Fix: Some disks caused a write-protected error. This bug is fixed by this
+revision.
+
+A108:
+Fix: A blue screen appeared when you accessed a CD if the CD-RFS is
+installed. This bug is fixed by this revision.

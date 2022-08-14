@@ -1,0 +1,11 @@
+Firmware Version 2.12
+
+-Modified target beta value of OPC to 0.35. 
+-Modified the returned value of the Read Capacity Command. The Last Recorded Address field was incorrect for DVD-R Version 2.0 for General media. 
+-Corrected the Next Border Marker address. The Next Border Maker started from 1 ECC block before. 
+-Modified Border Close sequence. If new border does not create, Last Border is closed with not appendable. 
+-Applied high frequency modulation to Laser power for writing. 
+-Now supports 4.7G media from Taiyoyuden. 
+
+
+

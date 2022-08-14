@@ -1,0 +1,37 @@
+DVD-116/DVD-106s/DVD-A06S Ver1.09 . modification point of Ver1.22 
+
+ 
+
+1) DVD-R for General Ver. 2.0, DVD-RW Ver. 1.1 The disk it corrects the trouble where with the Primo DVD record being completed capacity is recognized the 4.7GB with the Single-Border. 
+
+2) After several degrees inserting the MultiSession disk of the CD-R/RW, when the Multi Border disk of the DVD-R is inserted, having the fact that you can recognize the after the 2nd border and become correction 
+
+3) When the highest rpm is type of media above 5000rpm, it corrects the trouble which has the fact that revolution is increased to the highest rpm even with the disk where the imbalance quantity of the media is large. 
+
+4) Being not to have the Retry in Read Header command, it added the Retry sequence. 
+
+5) Windows XP HCT10.0 corresponding point addition (for Windows XP logographic acquisition) 
+
+As for this correction with modification for Windows XP logographic acquisition, even with version of the time before basically there is no problem in drive recognition and operation on the Windows XP. 
+
+(1) Support of Read Disc Information command 
+
+(2) Support of Read Track/RZone Information command 
+
+(3) _fua of Read12, support of _streaming bit 
+
+(4)   Device Busy Class, Multi Host Class and External Request Class of GESN 
+
+     Each Event support 
+
+(5) Structure Supported List of Read DVD Structure (Format = FFh) support 
+
+6) The Multi Session disk (the disk where RF level of each session is different extremely) not be able to recognize, measure. 
+
+7) Applying the CD-ROM, having the fact that after doing, the DVD-R sets up the Read and becomes the ? and others ? measure 
+
+8) Being times when search mistake occurs with 80 minute CD-R disks measure. 
+
+9) Improvement with DVD Dual disk 
+
+ 

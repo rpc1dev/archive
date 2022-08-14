@@ -1,0 +1,51 @@
+Ver1.14-->1.23 History 
+
+1. In bad CD-ROM media (CIRC error occur sometimes), Readability of it improved.
+
+2. When rotation speed become 5000rpm in retry sequence, retry sequence 
+   spend too many time. This bug has fixed.
+
+3. Response to pushing the eject key is improved.
+
+4. Auto adjusting sequence in  DVD-R media is improved.
+
+ver1.23-->1.25 History 
+
+1. Readability of CD-RW in 12x-20x area is improved.
+
+2. Support the medium complyed with Orange Book part2 ver3.1.
+
+Ver1.25-->2.02 Revision History
+
+01. Covered for the inconvenience of SiS's driver.
+    f/w is changed to detect the drive after installing
+    Win98(first edition) ver OSR to motherboard with
+    SiS chipset supporting UDMA, such as SiS530 or SiS620.
+
+02. Fixed not to drop down the transfer rate for
+    motherboard using VIA Technology's South Bridge
+    which is supporting UDMA.
+
+03. Changed not to downgrade f/w.
+
+04. Changed to use "DVD-T002" for "Region Reset" as
+    a precondition.
+
+05. Fixed not to fail playback in the "File Mode" of
+    PowerDVD Ver. 2.00.
+
+06. Improved Readability of CD-RW.
+
+07. Fixed not to fail reading the format-violating CD-R
+    media which is recorded by 4x Acer/Philips' drive.
+    (refer to 1.25 Revision History)
+
+08. Changed not to show a f/w version on BIOS POST
+    screan, but to show just "ATAPI  DVD-ROM  10X
+      Maximum            "(40 digits) as API requested.
+
+Ver2.02 -->2.06 Revision History
+
+1. With Intel D815EEA,VC820 motherboard, drive was not recognized by BIOS.
+   This problem is solved.
+

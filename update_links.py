@@ -18,7 +18,7 @@ def main(argv):
             soup = BeautifulSoup(fp, 'html.parser')
             for a in soup.find_all('a', href=True):
                 h = a.get('href')
-                if (not h.startswith('http') and not h.startswith('#') and not h.startswith('..') and not h.startswith('mailto')):
+                if (not h.startswith('http') and not h.startswith('ftp') and not h.startswith('#') and not h.startswith('..') and not h.startswith('mailto')):
                     cursor.execute('SELECT url FROM links WHERE path LIKE "%%%s"' % h)
                     record = cursor.fetchone()
                     if record is None:

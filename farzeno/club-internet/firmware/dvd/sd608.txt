@@ -1,0 +1,41 @@
+[HOT] SD-608 code-free mechanism revealed!!!!  
+by mitra88  posted 6/7/00 9:11:28 AM 
+ 
+ 
+
+Hi, this is mitra88.
+
+At last, at last, I found successful case of SD-608 code-free case from Korean users. And one more, code-free mechanism is also revealed!!!!
+
+The point is CLEARING THE ROM OF YOUR DRIVE!!!! I mean, you should clear the originally equipped firmware(it may be 1.3 or 2.3) before you flash BT01 on your drive. The clearing process really erase code-recognition routine of the drive. So if you just try to flash BT01 without clearing your firmware first, there would be no effect!!!!
+
+Clearing process is following.......
+
+1. Download BT01.ZIP and unzip it to certain folder(Ex:C:\TEMP).
+2. Reboot with 'COMMAND PROMPT ONLY' mode(press F8 while boot process just start and select).
+3. Run FROMDOS.EXE.
+4. Select FLASH at the top menu and execute CHECK SUM.
+5. You may see the current CHECK SUM.
+6. Then select OPTION at the top menu and execute CHANGE DRIVE, then change the drive to 'Samsung DVD-ROM SD-608'.
+7. You can see the message "DOWNLOAD FILE: *.*'.
+8. Select FLASH and execute CHECK SUM again.
+9. Select FLASH and execute FLASH DOWNLOAD.
+10. Then, you can see 'DOWNLOAD COMPLETE!! RESET YOUR PC!!'.
+11. Just reboot with 'COMMAND PROMPT ONLY' mode again.
+
+Now, your drive's firmware rom is completely erased. Your drive will not be recognized by your PC. But, don't panic! It is OK. After Rebooting process is completed, let's go to the writing process.
+
+1. Run FROMDOS.EXE again.
+2. You will see the message, 'Present ROM Version: BOOT'. If you don't see this message, you should try the clearing process described above again..
+3. Select FILE menu and execute OPEN and select BT01.OBJ.
+4. Select FLASH menu and execute FLASH DOWNLOAD.
+5. You will see 'DOWNLOAD COMPLETE!! RESET YOUR PC!!' again.
+6. Reboot your PC with Windows mode.
+
+Writing process is now completed. You will see the message "THIS DRIVE HAS NO REGION PROTECTION" when you run driveinfo 1.02 now!!!! YOUR DRIVE IS FREE NOW!!!
+
+After this process, you can reflash any firmware you want(including 1.2, 1.3, 2.3) with maintaining RPC-1 state.
+
+May the force be with you.
+Bye.
+ 
