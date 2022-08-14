@@ -1,0 +1,248 @@
+<html>
+<title>NEC ND1100A/ND1000A to ND1300A hack</title>
+</html>
+<body bgcolor="#000080" link="#FFFFFF" text="#00FFFF" vlink="#FFFF00">
+<h1 align="center"><font color="#FFFF00" size="7">NEC ND1100A/ND1000A to ND1300A hack</font></h1>
+<hr/>
+<p align="center"><font color="#FF0000" size="5">
+
+Disclaimer: <u>Use it on your own risk.</u> Make sure that bad flashing can destroy your drive completly. ALL FLASHINGS ARE A RISK FOR THE DRIVE! You lost the warranty if you use a modded firmware.
+
+<br/>
+</font></p>
+<hr/>
+<br/>
+<table align="center" border="1">
+<tr>
+<td>Firmware 0</td><td>Firmware 1</td><td>Remark</td>
+</tr>
+<td>
+<a href="https://drive.google.com/open?id=1z9asZlbT-VZ8STCMuKJi26I68nn03JMt">1.08B</a><br/>
+<a href="https://drive.google.com/open?id=1f1yVkkhIYtPungN4RHKbPXDqBKpI3TGK">1.0A</a><br/>
+<a href="https://drive.google.com/open?id=13JQ_eCXf0IzOtB829nvCh2pl_qt7EWhT">1.0C</a><br/>
+</td><td>
+<a href="https://drive.google.com/open?id=1zX1izf9WZyxnGjmJRqmaBTm8g5J4Bomz">1.08B 1</a><br/>
+<a href="https://drive.google.com/open?id=1cRkvo5NtAlFITtm-vHGV4McTWZYNR2HN">1.0A 1</a><br/>
+<a href="https://drive.google.com/open?id=1T2A_W7UcPNPcyzEAKX-LWFP8fcjzL8gU">1.0C 1</a><br/>
+</td><td>
+Based on Herrie's 1.08 with BronKowTech45's bitsetting hack<br/>
+Based on official 1.0A<br/>
+Based on Herrie's 1.0C TEST with BronKowTech45's bitsetting hack<br/>
+</td>
+</table>
+<br/>
+<p align="center">All this are RPC2 Autoreset and Ripspeed patched.<br/>
+<br/>
+Variant 0 has removed only the DVD-R/RW lock (I have readded this because some users have reported better results without the calibration patch.)<br/>
+The DVD-R calibration problem still persist. I suggest to not use the hacked firmware for writing to DVD-R.
+If you have access to a real ND1300A send me a mail because i collect some data of the calibration.
+<br/>
+<hr/>
+<p align="center"><font size="5">
+I have made some testburns with my ND1100A Servo 7.
+I can not say if it works at your drive! You be warned that this could destroy discs and drive.
+Check <a href="http://forum.rpc1.org/viewtopic.php?t=21490&amp;start=0">this thread</a>.
+</font>
+</p>
+<hr/>
+<br/>
+<p align="center"><font size="5">
+Disc that has worked (1.0A 1)</font></p>
+<table align="center" border="1">
+<tr>
+<td>Type</td><td>Speed</td><td>Brand</td><td>Manufacturer ID</td><td>Code</td>
+</tr><tr>
+<td>DVD-R</td><td>2x</td><td>Medianca 1-4x</td><td>OPTODISCK001</td><td>
+<font face="Courier New" size="1">
+00 42 00 00 01 40 C1 FD 9E D8 52 00 02 87 0E 13 .B...@....R.....<br/>
+87 88 80 00 03 4F 50 54 4F 44 49 00 04 53 43 4B .....OPTODI..SCK<br/>
+30 30 31 00 05 88 80 00 00 00 01 00 06 0B 0F 11 001.............<br/>
+</font></td></tr><tr>
+<td>DVD-R</td><td>4x</td><td>TDK 4x<br/>Fujifilm 4x</td><td>TYG01</td><td>
+<font face="Courier New" size="1">
+00 42 00 00 01 40 C1 FD 9E D8 52 00 02 86 0D 13 .B...@....R.....<br/>
+66 78 80 00 03 54 59 47 30 31 00 00 04 00 00 00 fx...TYG01......<br/>
+00 00 00 00 05 88 80 00 00 00 01 00 06 08 0F 11 ................<br/>
+</font></td></tr><tr>
+<td>DVD-RW</td><td>1x</td><td>Princo 1-2x</td><td>PRINCO</td><td>
+<font face="Courier New" size="1">
+00 42 00 00 01 40 D6 FD 9E D8 21 00 02 0F 08 06 .B...@....!.....<br/>
+88 65 11 00 03 50 52 49 4E 43 4F 00 04 00 00 00 .e...PRINCO.....<br/>
+00 00 00 00 05 06 88 65 11 00 00 00 06 10 0C 06 .......e........<br/>
+</font></td></tr><tr>
+<td>DVD-RW</td><td>1x</td><td>Imation</td><td>OPTODISCK001</td><td>
+<font face="Courier New" size="1">
+00 42 00 00 01 40 D6 FD 9E D8 20 00 02 0E 07 07 .B...@.... .....<br/>
+88 76 09 00 03 4F 50 54 4F 44 49 00 04 53 43 4B .v...OPTODI..SCK<br/>
+30 30 31 00 05 07 88 76 09 00 00 00 00 00 00 00 001....v........<br/>
+</font></td></tr><tr>
+<td>DVD-RW</td><td>2x</td><td>Pioneer</td><td>PVCW00V00245</td><td>
+<font face="Courier New" size="1">
+00 42 00 00 01 40 D6 FD 9E D8 21 00 02 0F 07 07 .B...@....!.....<br/>
+88 75 0E 00 03 50 56 43 57 30 30 00 04 56 30 30 .u...PVCW00..V00<br/>
+32 34 35 00 05 07 88 75 0E 00 00 00 06 10 0C 06 245....u........<br/>
+</font></td></tr>
+</table>
+<hr/>
+
+<p align="center"><font size="4">
+<br/>
+Here the details of my testburns ...
+<br/>
+<plaintext>
+
+-------------------------------------------------------------------------
+
+Medianca 1-4x
+                            Media Information                            
+Region information                                    N/A not a DVD-VIDEO
+Media code/Manufacturer ID                                   OPTODISCK001
+Format Capacity                                             Not Formatted
+Free Blocks                                                     412352512
+Free Capacity                                              4.38GB(4.71GB)
+Book Type                                                           DVD-R
+Media Type                                                          DVD-R
+Media Id Code Speed                                         4.0x 5540KBps
+Available Write Descriptor                           CLV  4.0x   5540KBps
+Available Write Descriptor                           CLV  2.0x   2770KBps
+Write Strategy Speed                                        4.0x 5540KBps
+2x Speed OPC beta                                                      0B
+2x Speed OPC power                                                     0F
+2x Write Strategy field 1                                     11 86 67 80
+2x Write Strategy field 2                               88 80 00 00 00 00
+4x Speed OPC beta                                                      05
+4x Speed OPC power                                                     16
+4x Write Strategy field 1                                     0D 10 0A 09
+4x Write Strategy field 2                                     00 00 00 00
+4x Write Strategy field 3                                     00 00 00 00
+4x Speed OPC beta multi-pulse                                          00
+4x Speed OPC power multi-pulse                                         00
+4x Write Strategy field 4                                     00 00 00 00
+4x Write Strategy field 5                               00 00 00 00 00 00
+4x Write Strategy field 6                                  00 00 00 00 00
+Data area starting sector                                          30000h
+Linear Density                                                0.267um/bit
+Track Density                                                0.74um/track
+Number of Layers                                                        1
+
+00 42 00 00 01 40 C1 FD 9E D8 52 00 02 87 0E 13 .B...@....R.....
+87 88 80 00 03 4F 50 54 4F 44 49 00 04 53 43 4B .....OPTODI..SCK
+30 30 31 00 05 88 80 00 00 00 01 00 06 0B 0F 11 001.............
+
+FW 1.0A 1 - Burn Ok at 2x, disc is ok
+4x not tested yet.
+
+-------------------------------------------------------------------------
+
+TDK DVD-R 1-4x or FujiFilm 4x
+                            Media Information                            
+Region information                                    N/A not a DVD-VIDEO
+Media code/Manufacturer ID                                          TYG01
+Format Capacity                                             Not Formatted
+Free Blocks                                                     412352512
+Free Capacity                                              4.38GB(4.71GB)
+Book Type                                                           DVD-R
+Media Type                                                          DVD-R
+Media Id Code Speed                                         4.0x 5540KBps
+Available Write Descriptor                           CLV  4.0x   5540KBps
+Available Write Descriptor                           CLV  2.0x   2770KBps
+Write Strategy Speed                                        4.0x 5540KBps
+2x Speed OPC beta                                                      08
+2x Speed OPC power                                                     0F
+2x Write Strategy field 1                                     11 87 78 80
+2x Write Strategy field 2                               88 80 00 00 00 00
+4x Speed OPC beta                                                      05
+4x Speed OPC power                                                     16
+4x Write Strategy field 1                                     0D 0F 0B 0B
+4x Write Strategy field 2                                     00 00 00 00
+4x Write Strategy field 3                                     00 00 00 00
+4x Speed OPC beta multi-pulse                                          00
+4x Speed OPC power multi-pulse                                         00
+4x Write Strategy field 4                                     00 00 00 00
+4x Write Strategy field 5                               00 00 00 00 00 00
+4x Write Strategy field 6                                  00 00 00 00 00
+Data area starting sector                                          30000h
+Linear Density                                                0.267um/bit
+Track Density                                                0.74um/track
+Number of Layers                                                        1
+
+00 42 00 00 01 40 C1 FD 9E D8 52 00 02 86 0D 13 .B...@....R.....
+66 78 80 00 03 54 59 47 30 31 00 00 04 00 00 00 fx...TYG01......
+00 00 00 00 05 88 80 00 00 00 01 00 06 08 0F 11 ................
+
+FW 1.0A 1 - Burn Ok at 4x, disc is ok
+
+-------------------------------------------------------------------------
+
+Princo 1-2x DVD-RW
+                            Media Information                            
+Region information                                    N/A not a DVD-VIDEO
+Media code/Manufacturer ID                                         PRINCO
+Format Capacity                                            3.97GB(4.27GB)
+Book Type                                                          DVD-RW
+Media Type                                                         DVD-RW
+Media Id Code Speed                                         1.0x 1385KBps
+Available Write Descriptor                           CLV  1.0x   1385KBps
+Write Strategy Speed                                        2.0x 2770KBps
+Data area starting sector                                          30000h
+Data area end sector                                               FF0BFh
+Linear Density                                                0.267um/bit
+Track Density                                                0.74um/track
+Number of Layers                                                        1
+
+00 42 00 00 01 40 D6 FD 9E D8 21 00 02 0F 08 06 .B...@....!.....
+88 65 11 00 03 50 52 49 4E 43 4F 00 04 00 00 00 .e...PRINCO.....
+00 00 00 00 05 06 88 65 11 00 00 00 06 10 0C 06 .......e........
+
+FW 1.0A 1 - Burn Ok at 1x, disc is ok (but slow at reading)
+
+-------------------------------------------------------------------------
+
+Imation DVD-RW
+                            Media Information                           
+Region information                                    N/A not a DVD-VIDEO
+Media code/Manufacturer ID                                   OPTODISCK001
+Format Capacity                                            3.97GB(4.27GB)
+Book Type                                                          DVD-RW
+Media Type                                                         DVD-RW
+Media Id Code Speed                                         1.0x 1385KBps
+Available Write Descriptor                           CLV  1.0x   1385KBps
+Write Strategy Speed                                        1.0x 1385KBps
+Data area starting sector                                          30000h
+Data area end sector                                              1FC8AFh
+Linear Density                                                0.267um/bit
+Track Density                                                0.74um/track
+Number of Layers                                                        1
+
+00 42 00 00 01 40 D6 FD 9E D8 20 00 02 0E 07 07 .B...@.... .....
+88 76 09 00 03 4F 50 54 4F 44 49 00 04 53 43 4B .v...OPTODI..SCK
+30 30 31 00 05 07 88 76 09 00 00 00 00 00 00 00 001....v........
+
+FW 1.0A 1 - Burn Ok at 1x, disc is ok
+
+-------------------------------------------------------------------------
+
+Pioneer DVD-RW (1-2x)
+                            Media Information                           
+Region information                                    N/A not a DVD-VIDEO
+Media code/Manufacturer ID                                   PVCW00V00245
+Format Capacity                                            2.78GB(2.98GB)
+Book Type                                                          DVD-RW
+Media Type                                                         DVD-RW
+Media Id Code Speed                                         2.0x 2770KBps
+Available Write Descriptor                           CLV  2.0x   2770KBps
+Available Write Descriptor                           CLV  1.0x   1385KBps
+Write Strategy Speed                                        2.0x 2770KBps
+Data area starting sector                                          30000h
+Data area end sector                                              1635EFh
+Linear Density                                                0.267um/bit
+Track Density                                                0.74um/track
+Number of Layers                                                        1
+
+00 42 00 00 01 40 D6 FD 9E D8 21 00 02 0F 07 07 .B...@....!.....
+88 75 0E 00 03 50 56 43 57 30 30 00 04 56 30 30 .u...PVCW00..V00
+32 34 35 00 05 07 88 75 0E 00 00 00 06 10 0C 06 245....u........
+
+FW 1.0A 1 - Burn Ok at 2x, disc is ok
+
+</plaintext></font></p></p></body>
