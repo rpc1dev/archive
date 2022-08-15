@@ -4,7 +4,7 @@
 //go there and rip from them they give them away for free!
 var no = 5; // snow number
 var speed = 8; // smaller number moves the snow faster
-var snowflake = "http://perso.club-internet.fr/farzeno/firmware/heart.gif";
+var snowflake = "https://archive.rpc1.org/farzeno/club-internet/heart.gif";
 var ns4up = (document.layers) ? 1 : 0;
 var ie4up = (document.all) ? 1 : 0;
 var dx, xp, yp;    // coordinate and position variables
